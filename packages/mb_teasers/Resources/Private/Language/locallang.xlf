@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.0">
+    <file source-language="en" datatype="plaintext" original="extra" date="2014-04-31T09:08:41Z" product-name="lang">
+        <header/>
+        <body>
+			<trans-unit id="tx_mb_teasers_iconteaser.more_about_company" xml:space="preserve">
+				<source>Learn more</source>
+			</trans-unit>
+			<trans-unit id="tx_mb_teasers_iconteaser.cat1" xml:space="preserve">
+                <source>Heat</source>
+            </trans-unit>
+            <trans-unit id="tx_mb_teasers_iconteaser.cat2" xml:space="preserve">
+                <source>Cold</source>
+            </trans-unit>
+            <trans-unit id="tx_mb_teasers_iconteaser.cat3" xml:space="preserve">
+                <source>Air</source>
+            </trans-unit>
+            <trans-unit id="tx_mb_teasers_iconteaser.cat_text" xml:space="preserve">
+                <source>Do you need help in the search for a suitable product?</source>
+            </trans-unit>
+            <trans-unit id="tx_mb_teasers_iconteaser.cat_button" xml:space="preserve">
+                <source>Select contact person</source>
+            </trans-unit>
+
+			<trans-unit id="tx_mb_teasers_ctacontact.rubrik" xml:space="preserve">
+                <source>Contact</source>
+            </trans-unit>
+            <trans-unit id="tx_mb_teasers_ctacontact.headline" xml:space="preserve">
+                <source>Do you have any questions? Our contact persons will be happy to advise you.</source>
+            </trans-unit>
+            <trans-unit id="tx_mb_teasers_ctacontact.contact_btn" xml:space="preserve">
+                <source>Find contact person</source>
+            </trans-unit>
+
+            <trans-unit id="tx_mb_teasers_ctacontact.rubrik1" xml:space="preserve">
+                <source>Career</source>
+            </trans-unit>
+            <trans-unit id="tx_mb_teasers_ctacontact.headline1" xml:space="preserve">
+                <source>Stay up-to-date with our newsletter.</source>
+            </trans-unit>
+            <trans-unit id="tx_mb_teasers_ctacontact.contact_btn1" xml:space="preserve">
+                <source>log on</source>
+            </trans-unit>
+            <trans-unit id="tx_mb_teasers_subpagestiles.more_info" xml:space="preserve">
+				<source>More Info</source>
+			</trans-unit>
+            <trans-unit id="show_details" xml:space="preserve">
+				<source>Show Details</source>
+			</trans-unit>
+            <trans-unit id="close_details" xml:space="preserve">
+				<source>Close Details</source>
+			</trans-unit>
+        </body>
+    </file>
+</xliff>

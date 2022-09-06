@@ -1,0 +1,20 @@
+<div class="accordion accordion-flush" id="mit-accordion">
+    <f:for as="tile" each="{tiles}" iteration="iterator">
+        <div class="accordion-item">
+            <h3 class="accordion-header" id="heading{iterator.index}">
+                <button class="accordion-button {f:if(condition: '{iterator.index} != 0', then: 'collapsed')}"
+                    type="button" data-bs-toggle="collapse" data-bs-target="#collapse{iterator.index}"
+                    aria-expanded="true" aria-controls="collapse{iterator.index}" data-close="{f:translate(key: 'show_details', extensionName: 'mb_teasers')}" data-open="{f:translate(key: 'close_details', extensionName: 'mb_teasers')}">
+                    {tile.title}
+                </button>
+            </h3>
+            <div id="collapse{iterator.index}"
+                class="accordion-collapse {f:if(condition: '{iterator.index} == 0', then: 'collapse show', else: 'collapse')}"
+                aria-labelledby="heading{iterator.index}" data-bs-parent="#mit-accordion">
+                <div class="accordion-body">
+                    <f:format.raw>{tile.description}</f:format.raw>
+                </div>
+            </div>
+        </div>
+    </f:for>
+</div>

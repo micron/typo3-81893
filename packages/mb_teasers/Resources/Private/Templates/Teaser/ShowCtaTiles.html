@@ -1,0 +1,20 @@
+<div class="contact-teaser">
+    <!-- <div class="row gx-1"> -->
+        <f:if condition="{data.is_feature}">
+            <f:then>
+                <div class="contact-teaser__inner brand-color-bg">
+                    <h4>{data.subheader}</h4>
+                    <h3>{data.header}</h3>
+                    <f:link.typolink class="btn" parameter="{data.header_link}">{data.teaser_link_text}</f:link.typolink>
+                </div>
+            </f:then>
+            <f:else>
+                <div class="contact-teaser__inner white-color-bg">
+                    <h4 class="brand-color">{data.subheader}</h4>
+                    <h3>{data.header}</h3>
+                    <f:link.typolink class="btn" parameter="{data.header_link}">{data.teaser_link_text}</f:link.typolink>
+                </div>
+            </f:else>
+        </f:if>
+    <!-- </div> -->
+</div>

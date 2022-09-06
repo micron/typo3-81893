@@ -1,0 +1,112 @@
+<f:if condition="{data.layout} == 0">
+    <div class="mit-promotion">
+        <div class="row gx-1">
+            <f:for each="{tiles}" as="tile" iteration="tileIterator">
+                <f:if condition="{tile.isFeature}">
+                    <f:then>
+                        <div class="col-xl-6 col-md-12 pb-xl-0 pb-1">
+                            <div class="mit-promotion__inner feature" style="background-color: {tile.bgColor}">
+                                <div class="feature-left">
+                                    <h4>{tile.subheadline}</h4>
+                                    <div class="d-flex d-sm-none justify-content-center w-100">
+                                        <f:if condition="{tile.tileImage}">
+                                            <f:image class="slider-header__img" image="{tile.tileImage.originalResource}"
+                                                     alt="{tile.tileImage.originalResource.alternative}" />
+                                        </f:if>
+                                    </div>
+                                    <div class="feature-heldine"><f:format.raw>{tile.headline}</f:format.raw></div>
+                                    <f:if condition="{tile.moreInfoLinkText}">
+                                        <f:link.typolink class="promotion_link btn" parameter="{tile.moreInfoLink}">{f:if(condition: '{tile.moreInfoLinkText}', then: '{tile.moreInfoLinkText}', else: '{f:translate(key: \'tx_krslider_domain_model_slide.more_info_link_text\')}')}</f:link.typolink>
+                                    </f:if>
+                                </div>
+                                <div class="feature-right d-none d-sm-flex align-items-center">
+                                    <f:if condition="{tile.tileImage}">
+                                        <f:image class="slider-header__img" image="{tile.tileImage.originalResource}"
+                                                 alt="{tile.tileImage.originalResource.alternative}" />
+                                    </f:if>
+                                </div>
+                            </div>
+                        </div>
+                    </f:then>
+                    <f:else>
+                        <div class="col-xl-3 col-md-6 pb-md-0 pb-1">
+                            <div class="mit-promotion__inner h-100" style="background-color: {tile.bgColor}">
+                                <h4>{tile.subheadline}</h4>
+                                <f:if condition="{tile.tileImage}">
+                                    <f:image class="slider-header__img" image="{tile.tileImage.originalResource}"
+                                             alt="{tile.tileImage.originalResource.alternative}" />
+                                </f:if>
+                                <div>
+                                    <h3><f:format.stripTags>{tile.headline}</f:format.stripTags></h3>
+                                    <f:if condition="{tile.moreInfoLinkText}">
+                                        <f:link.typolink class="promotion_link btn" parameter="{tile.moreInfoLink}">{f:if(condition: '{tile.moreInfoLinkText}', then: '{tile.moreInfoLinkText}', else: '{f:translate(key: \'tx_krslider_domain_model_slide.more_info_link_text\')}')}</f:link.typolink>
+                                    </f:if>
+                                </div>
+                            </div>
+                        </div>
+                    </f:else>
+                </f:if>
+            </f:for>
+        </div>
+    </div>
+</f:if>
+
+<f:if condition="{data.layout} == 1">
+    <div class="overview-teasers">
+        <div class="row g-1">
+            <f:for each="{tiles}" as="tile" iteration="tileIterator">
+                <f:if condition="{tile.isFeature}">
+                    <f:then>
+                        <div class="col-md-6 col-xl-3">
+                            <div class="teaser feature">
+                                <div>
+                                    <h4 class="white">{tile.subheadline}</h4>
+                                    <h3 class="white"><f:format.stripTags allowedTags="<br>">{tile.headline}</f:format.stripTags></h3>
+                                </div>
+                                <div>
+                                    <f:if condition="{tile.moreInfoLinkText}">
+                                        <f:link.typolink class="btn" parameter="{tile.moreInfoLink}">{f:if(condition: '{tile.moreInfoLinkText}', then: '{tile.moreInfoLinkText}', else: '{f:translate(key: \'tx_krslider_domain_model_slide.more_info_link_text\')}')}</f:link.typolink>
+                                    </f:if>
+                                </div>
+                            </div>
+                        </div>
+                    </f:then>
+                    <f:else>
+                        <div class="col-md-6 col-xl-3">
+                            <div class="teaser">
+                                <div>
+                                    <h4 class="brand-color">{tile.subheadline}</h4>
+                                    <h3><f:format.stripTags allowedTags="<br>">{tile.headline}</f:format.stripTags></h3>
+                                </div>
+                                <div>
+                                    <f:if condition="{tile.moreInfoLink}">
+                                        <f:link.typolink class="btn" parameter="{tile.moreInfoLink}">{f:if(condition: '{tile.moreInfoLinkText}', then: '{tile.moreInfoLinkText}', else: '{f:translate(key: \'tx_krslider_domain_model_slide.more_info_link_text\')}')}</f:link.typolink>
+                                    </f:if>
+                                </div>
+                            </div>
+                        </div>
+                    </f:else>
+                </f:if>
+            </f:for>
+        </div>
+    </div>
+</f:if>
+
+<f:if condition="{data.layout} == 3">
+    <div class="solution-tiles">
+        <!-- <div class="row g-1"> -->
+            <f:for each="{tiles}" as="tile" iteration="tileIterator">
+                <!-- <div class="col-md-6 col-xl-3"> -->
+                    <div class="teaser">
+                        <f:if condition="{tile.tileImage}">
+                            <f:image class="img" image="{tile.tileImage.originalResource}"
+                                        alt="{tile.tileImage.originalResource.alternative}" />
+                        </f:if>
+                        <div class="headline"><f:format.raw>{tile.headline}</f:format.raw></div>
+                        <p>{tile.subheadline}</p>
+                    </div>
+                <!-- </div> -->
+            </f:for>
+        <!-- </div> -->
+    </div>
+</f:if>

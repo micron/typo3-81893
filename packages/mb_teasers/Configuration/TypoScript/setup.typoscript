@@ -1,0 +1,74 @@
+
+plugin.tx_mbteasers_teaser {
+    view {
+        templateRootPaths.0 = EXT:mb_teasers/Resources/Private/Templates/
+        templateRootPaths.1 = {$plugin.tx_mbteasers_teaser.view.templateRootPath}
+        partialRootPaths.0 = EXT:mb_teasers/Resources/Private/Partials/
+        partialRootPaths.1 = {$plugin.tx_mbteasers_teaser.view.partialRootPath}
+        layoutRootPaths.0 = EXT:mb_teasers/Resources/Private/Layouts/
+        layoutRootPaths.1 = {$plugin.tx_mbteasers_teaser.view.layoutRootPath}
+    }
+    persistence {
+        storagePid = {$plugin.tx_mbteasers_teaser.persistence.storagePid}
+        #recursive = 1
+    }
+    features {
+        #skipDefaultArguments = 1
+        # if set to 1, the enable fields are ignored in BE context
+        ignoreAllEnableFieldsInBe = 0
+    }
+    mvc {
+        #callDefaultActionIfActionCantBeResolved = 1
+    }
+}
+
+### hide the default header for this plugin only
+tt_content.mbteasers_teaser.settings.defaultHeaderType = 100
+tt_content.mbteasers_iconteaser.settings.defaultHeaderType = 100
+tt_content.mbteasers_categoryteaser.settings.defaultHeaderType = 100
+tt_content.mbteasers_promotiontiles.settings.defaultHeaderType = 100
+tt_content.mbteasers_ctabox.settings.defaultHeaderType = 100
+tt_content.mbteasers_formsselector.settings.defaultHeaderType = 100
+tt_content.mbteasers_ctatiles.settings.defaultHeaderType = 100
+
+# these classes are only used in auto-generated templates
+plugin.tx_mbteasers._CSS_DEFAULT_STYLE (
+    textarea.f3-form-error {
+        background-color:#FF9F9F;
+        border: 1px #FF0000 solid;
+    }
+
+    input.f3-form-error {
+        background-color:#FF9F9F;
+        border: 1px #FF0000 solid;
+    }
+
+    .tx-mb-teasers table {
+        border-collapse:separate;
+        border-spacing:10px;
+    }
+
+    .tx-mb-teasers table th {
+        font-weight:bold;
+    }
+
+    .tx-mb-teasers table td {
+        vertical-align:top;
+    }
+
+    .typo3-messages .message-error {
+        color:red;
+    }
+
+    .typo3-messages .message-ok {
+        color:green;
+    }
+)
+page {
+    includeCSS {
+        overviewTilesWithFilter = EXT:mb_teasers/Resources/Public/Css/overviewTilesWithFilter.css
+    }
+    includeJSFooter {
+     overviewTilesWithFilter = EXT:mb_teasers/Resources/Public/JavaScript/overviewTilesWithFilter.js
+    }
+}

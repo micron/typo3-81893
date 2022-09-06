@@ -1,0 +1,25 @@
+{namespace v=FluidTYPO3\Vhs\ViewHelpers}
+<div class="multi-forms">
+    <div class="container-lg p-0 overflow-hidden">
+        <div class="row gx-6">
+            <div class="col-12 col-md-6">
+                <div class="multi-forms__selector">
+                    <h3>{data.header}</h3>
+                    <div class="input-group select-control position-relative">
+                        <f:form.select class="form-control" name="elements" options="{elements}" optionValueField="uid"
+                        optionLabelField="headline" />
+                        <span class="material-icons position-absolute">&#xe313;</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-xl-5 mt-5 mt-md-0">
+                <f:for as="element" each="{elements}">
+                    <div class="multi-forms__tabs" id="selected-{element.uid}">
+                        <v:content.render contentUids="{0: element.ttContentElement}" />
+                    </div>
+                </f:for>
+
+            </div>
+        </div>
+    </div>
+</div>

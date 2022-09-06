@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.0">
+    <file source-language="en" datatype="plaintext" original="extra" date="2014-04-31T09:08:41Z" product-name="lang" target-language="fr">
+        <header/>
+        <body>
+            <trans-unit id="tx_mb_teasers_iconteaser.more_about_company" xml:space="preserve">
+                <source>Learn more</source>
+                <target>Plus d'info</target>
+            </trans-unit>
+			<trans-unit id="tx_mb_teasers_iconteaser.cat1" xml:space="preserve">
+                <source>Heat</source>
+                <target>Wärme</target>
+            </trans-unit>
+            <trans-unit id="tx_mb_teasers_iconteaser.cat2" xml:space="preserve">
+                <source>Cold</source>
+                <target>Kälte</target>
+            </trans-unit>
+            <trans-unit id="tx_mb_teasers_iconteaser.cat3" xml:space="preserve">
+                <source>Air</source>
+                <target>Luft</target>
+            </trans-unit>
+            <trans-unit id="tx_mb_teasers_iconteaser.cat_text" xml:space="preserve">
+                <source>Do you need help in the search for a suitable product?</source>
+                <target>Vous avez besoin d'aide pour trouver le produit qui vous convient ?</target>
+            </trans-unit>
+            <trans-unit id="tx_mb_teasers_iconteaser.cat_button" xml:space="preserve">
+                <source>Select contact person</source>
+                <target>Choisir un interlocuteur</target>
+            </trans-unit>
+            <trans-unit id="tx_mb_teasers_subpagestiles.more_info" xml:space="preserve">
+                <source>More Info</source>
+                <target>En savoir plus</target>
+            </trans-unit>
+            <trans-unit id="show_details" xml:space="preserve">
+				<source>Show Details</source>
+                <target>Afficher les détails</target>
+			</trans-unit>
+            <trans-unit id="close_details" xml:space="preserve">
+				<source>Close Details</source>
+                <target>Fermer les détails</target>
+			</trans-unit>
+
+			<trans-unit id="tx_mb_teasers_ctacontact.rubrik" xml:space="preserve">
+                <source>Contact</source>
+            </trans-unit>
+            <trans-unit id="tx_mb_teasers_ctacontact.headline" xml:space="preserve">
+                <source>Vous avez des questions ? Nos interlocuteurs se feront un plaisir de vous conseiller.</source>
+            </trans-unit>
+            <trans-unit id="tx_mb_teasers_ctacontact.contact_btn" xml:space="preserve">
+                <source>Trouver la personne de contact</source>
+            </trans-unit>
+
+            <trans-unit id="tx_mb_teasers_ctacontact.rubrik1" xml:space="preserve">
+                <source>Carrière</source>
+            </trans-unit>
+            <trans-unit id="tx_mb_teasers_ctacontact.headline1" xml:space="preserve">
+                <source>Restez à jour avec notre bulletin d'information.</source>
+            </trans-unit>
+            <trans-unit id="tx_mb_teasers_ctacontact.contact_btn1" xml:space="preserve">
+                <source>Connectez-vous</source>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

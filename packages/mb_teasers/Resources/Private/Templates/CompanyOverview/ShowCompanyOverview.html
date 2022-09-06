@@ -1,0 +1,26 @@
+<div class="company-tiles">
+    <div class="row g-1">
+        <f:for as="tile" each="{tiles}">
+            <div class="col-md-6 col-xl-3">
+                <f:if condition="{tile.type} == 0">
+                    <f:then>
+                        <div class="company-tiles__box" style="background-color: {tile.bgColor}">
+                            <div>
+                                <h4 style="color: {tile.textColor}" class="mb-5 mb-md-6">{tile.subheadline}</h4>
+                                <h3 style="color: {tile.textColor}" class="mb-3"><f:format.stripTags allowedTags="<br>">{tile.headline}</f:format.stripTags></h3>
+                            </div>
+                            <f:if condition="{tile.moreInfoLink}">
+                                <div>
+                                    <f:link.typolink class="btn" parameter="{tile.moreInfoLink}">{tile.moreInfoLinkText -> f:format.raw()} </f:link.typolink>
+                                </div>
+                            </f:if>
+                        </div>
+                    </f:then>
+                    <f:else>
+                        <div class="company-tiles__box separator" style="background-color: {tile.bgColor}"></div>
+                    </f:else>
+                </f:if>
+            </div>
+        </f:for>
+    </div>
+</div>

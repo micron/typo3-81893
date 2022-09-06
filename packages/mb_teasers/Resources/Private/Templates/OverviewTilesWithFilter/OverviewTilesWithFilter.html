@@ -1,0 +1,76 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+
+<div class="overview-container">
+    <ul class="pages-menu overview-tiles__links">
+        <f:for as="tile" each="{allFilteredTiles}" iteration="iterator">
+            <li>
+                <a href="#tile{iterator.index}" title="{tile.title}"
+                    class="link {f:if(condition: '{iterator.index} == 0', then: 'active')}">{tile.title}</a>
+            </li>
+        </f:for>
+    </ul>
+
+    <f:for as="tileList" each="{allFilteredTiles}" iteration="iterator">
+        <div id="tile{iterator.index}"
+            class="overview-tiles {f:if(condition: '{iterator.index} == 0', then: 'd-block', else: 'd-none')}">
+            <div class="row g-1">
+                <f:for as="tile" each="{tileList.mbOverviewTilesWithFilter}">
+                    <div class="col-md-6 col-xl-3">
+                        <f:if condition="{tile.type} == 0">
+                            <f:then>
+                                <div class="overview-tiles__box" style="background-color: {tile.bgColor}">
+                                    <h4 style="color: {tile.subheadlineColor}">{tile.subheadline}</h4>
+                                    <div>
+                                        <f:if condition="{tile.paragraphText}">
+                                            <span>
+                                                <f:format.stripTags allowedTags="<br>">{tile.paragraphText}</f:format.stripTags>
+                                            </span>
+                                        </f:if>
+                                        <h3 style="color: {tile.headlineColor}">
+                                            <f:format.stripTags allowedTags="<br>">{tile.headline}</f:format.stripTags>
+                                        </h3>
+                                    </div>
+                                    <f:if condition="{tile.tileModalContent}">
+                                        <f:then>
+                                            <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#overview-tiles-model">
+                                                {tile.moreInfoLinkText}
+                                              </button>
+                                        </f:then>
+                                        <f:else>
+                                            <a class="btn invisible" href=""></a>
+                                        </f:else>
+                                    </f:if>
+                                    <div class="modal-content d-none">
+                                        <f:format.raw>{tile.tileModalContent}</f:format.raw>
+                                        <f:link.page class="btn" pageUid="{tile.moreInfoLink}">
+                                                {tile.moreInfoLinkText}
+                                        </f:link.page>
+                                    </div>
+                                </div>
+                            </f:then>
+                            <f:else>
+                                <div class="overview-tiles__box separator" style="background-image: url(<f:uri.image image='{tile.tilePicture.originalResource}' />)">
+                                </div>
+                            </f:else>
+                        </f:if>
+                    </div>
+                </f:for>
+            </div>
+        </div>
+    </f:for>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="overview-tiles-model" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="overview-tiles-model-label" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                    <span class="material-icons">&#xe5cd;</span>
+                </button>
+            </div>
+            <div class="modal-body"></div>
+        </div>
+    </div>
+</div>

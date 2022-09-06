@@ -1,0 +1,28 @@
+{
+    "name": "mb/mb-teasers",
+    "type": "typo3-cms-extension",
+    "description": "This extension contains teasers.",
+    "authors": [
+        {
+            "name": "Muhammad Zohaib",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "typo3/cms-core": "^10.4.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Mb\\MbTeasers\\": "Classes"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Mb\\MbTeasers\\Tests\\": "Tests"
+        }
+    },
+    "replace": {
+        "mb/mb-teasers": "self.version",
+        "typo3-ter/mb-teasers": "self.version"
+    }
+}

@@ -1,0 +1,23 @@
+<div class="subpage-teasers">
+    <div class="row g-1">
+        <f:for each="{subpages}" as="page" iteration="tileIterator">
+            <div class="col-md-6 col-xl-3">
+                <div class="teaser">
+                    <h4 class="brand-color">
+                        <f:if condition="{page.subtitle}">
+                            <f:then>{page.subtitle}</f:then>
+                            <f:else >{currentPageTitle}</f:else>
+                        </f:if>
+                    </h4>
+                    <div class="h-100 d-flex flex-column justify-content-between">
+                        <div>
+                            <h3><f:format.stripTags allowedTags="<br>">{page.title}</f:format.stripTags></h3>
+                            <p>{page.description}</p>
+                        </div>
+                        <f:link.page class="btn" pageUid="{page.uid}"><f:translate key="tx_mb_teasers_subpagestiles.more_info" /></f:link.page>
+                    </div>
+                </div>
+            </div>
+        </f:for>
+    </div>
+</div>

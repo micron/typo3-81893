@@ -1,0 +1,44 @@
+<f:if condition="{data.imageorient} == 26">
+    <f:then>
+        <!-- image position: left -->
+        <div class="image-text-teaser img-left {f:if(condition: '{data.bg_color}', then: 'colored')}">
+            <div class="image" style="background-color: {data.bg_color}">
+                <f:if condition="{image}">
+                    <f:image image="{image}" />
+                </f:if>
+            </div>
+            <div class="text-teaser-outer">
+                <div class="text-teaser">
+                    <h4>{data.subheader}</h4>
+                    <h2>{data.header}</h2>
+                    <f:format.raw>{data.bodytext}</f:format.raw>
+                    <f:link.typolink class="btn" parameter="{data.header_link}">
+                        {data.teaser_link_text}
+                    </f:link.typolink>
+                </div>
+            </div>
+        </div>
+    </f:then>
+    <f:else>
+        <!-- image position: right -->
+        <f:if condition="{data.imageorient} == 25">
+            <div class="image-text-teaser img-right {f:if(condition: '{data.bg_color}', then: 'colored')}">
+                <div class="image" style="background-color: {data.bg_color}">
+                    <f:if condition="{image}">
+                        <f:image image="{image}" />
+                    </f:if>
+                </div>
+                <div class="text-teaser-outer">
+                    <div class="text-teaser">
+                        <h4>{data.subheader}</h4>
+                        <h2>{data.header}</h2>
+                        <f:format.raw>{data.bodytext}</f:format.raw>
+                        <f:link.typolink class="btn" parameter="{data.header_link}">
+                            {data.teaser_link_text}
+                        </f:link.typolink>
+                    </div>
+                </div>
+            </div>
+        </f:if>
+    </f:else>
+</f:if>

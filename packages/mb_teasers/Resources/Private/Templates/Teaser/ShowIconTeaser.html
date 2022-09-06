@@ -1,0 +1,14 @@
+<div class="mit-icon-teaser">
+    <div class="row">
+        <f:if condition="{icons}">
+            <f:for as="icon" each="{icons}">
+                <div class="col-xl-2 col-lg-4 col-sm-6 mb-3 mb-xl-0">
+                    <div class="mit-icon-teaser__inner d-flex flex-column align-items-center">
+                        <f:image image="{icon}" class="mit-icon-teaser__img"/>
+                        <f:format.raw>{icon.description}</f:format.raw>
+                    </div>
+                </div>
+            </f:for>
+        </f:if>
+    </div>
+</div>

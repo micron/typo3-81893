@@ -16,7 +16,9 @@
 
 ### Video
 
-https://s3.eu-central-1.amazonaws.com/kr.public/tmp/typo3_81893.mp4
+
+https://user-images.githubusercontent.com/568633/188592917-4732b9e3-edda-4b8d-a6d5-247bd027e4be.mp4
+
 
 #### Content element used
 
